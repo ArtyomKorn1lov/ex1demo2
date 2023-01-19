@@ -212,7 +212,7 @@ IncludeTemplateLangFile(__FILE__);
 		"SHOW_404" => "N",
 		"SLIDER_PROPERTY" => "",
 		"SORT_BY1" => "TIMESTAMP_X",
-		"SORT_BY2" => "SORT",
+		"SORT_BY2" => "NAME",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N",

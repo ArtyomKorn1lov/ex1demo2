@@ -1,7 +1,7 @@
 <?
 $sSectionName = "Отзывы";
 $arDirProperties = Array(
-   "title" => "rew",
+   "title" => "Отзывы",
    "keywords_inner" => "rew"
 );
 ?>

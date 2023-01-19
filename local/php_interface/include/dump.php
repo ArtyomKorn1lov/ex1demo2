@@ -7,5 +7,3 @@ function dump($data)
     </pre>
     <?php
 }
-
-?>

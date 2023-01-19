@@ -6,5 +6,3 @@ function DateIsBetween($start_date, $end_date, $todays_date)
     $today_timestamp = strtotime($todays_date);
     return (($today_timestamp >= $start_timestamp) && ($today_timestamp <= $end_timestamp));
 }
-
-?>
