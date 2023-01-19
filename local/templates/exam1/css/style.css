@@ -2774,3 +2774,7 @@ hr + .catalog-box {
   color: #00ff43;
 }
 
+.image-slide {
+    width: 100%;
+    height: 100%;
+}

@@ -1,4 +1,4 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -50,14 +50,16 @@ $this->setFrameMode(true);
 
     <? //dump($arResult["DISPLAY_PROPERTIES"]["DOCUMENTS"]["FILE_VALUE"]) ?>
 
-    <div class="exam-review-doc">
-        <p>Документы:</p>
-        <? foreach ($arResult["DISPLAY_PROPERTIES"]["DOCUMENTS"]["FILE_VALUE"] as $pid => $arProperty): ?>
-            <div class="exam-review-item-doc"><img class="rew-doc-ico"
-                                                   src="<?= SITE_TEMPLATE_PATH ?>/img/icons/pdf_ico_40.png">
-                <a href="<?= $arProperty['SRC'] ?>"><?= $arProperty["ORIGINAL_NAME"] ?></a></div>
-        <? endforeach ?>
-    </div>
+    <? if ($arResult["DISPLAY_PROPERTIES"]["DOCUMENTS"]["FILE_VALUE"]): ?>
+        <div class="exam-review-doc">
+            <p>Документы:</p>
+            <? foreach ($arResult["DISPLAY_PROPERTIES"]["DOCUMENTS"]["FILE_VALUE"] as $pid => $arProperty): ?>
+                <div class="exam-review-item-doc"><img class="rew-doc-ico"
+                                                       src="<?= SITE_TEMPLATE_PATH ?>/img/icons/pdf_ico_40.png">
+                    <a href="<?= $arProperty['SRC'] ?>"><?= $arProperty["ORIGINAL_NAME"] ?></a></div>
+            <? endforeach ?>
+        </div>
+    <? endif; ?>
     <hr>
     <a href="<?= $arResult["LIST_PAGE_URL"] ?>" class="review-block_back_link"> &larr; К списку отзывов</a>
 </div>
