@@ -27,19 +27,19 @@ for ($index = 0; $index < $itemSize; $index++) {
     $title = htmlspecialcharsex($arResult[$index]["TITLE"]);
     //$arrow = ($index > 0? '<i class="fa fa-angle-right"></i>' : '');
 
-    if ($arResult[$index]["LINK"] <> "" && $index != $itemSize - 2) {
+    if ($arResult[$index]["LINK"] <> "" && $index != $itemSize - 1) {
         $strReturn .= '
 		    <a href="' . $arResult[$index]["LINK"] . '">' . $title . '</a>';
     }
-    if ($index == $itemSize - 2) {
+    /*if ($index == $itemSize - 2) {
         $strReturn .= '
            <span>' . $title . '</span>';
-    }
-    /*else
+    }*/
+    else
     {
         $strReturn .= '
            <span>'.$title.'</span>';
-    }*/
+    }
 }
 
 $strReturn .= '<div></div></div></div>';
