@@ -23,9 +23,10 @@ $this->setFrameMode(true);
                             <div class="title">
                                 <div class="photo-block">
                                     <? if ($arParams["DISPLAY_PICTURE"] != "N" && is_array($arItem["PREVIEW_PICTURE"])): ?>
+                                        <? $renderImage = CFile::ResizeImageGet($arItem["PREVIEW_PICTURE"], array("width" => 39, "height" => 39)); ?>
                                         <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>"><img class="image-slide"
-                                                src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>"
-                                                alt="img"></a>
+                                                                                         src="<?= $renderImage['src'] ?>"
+                                                                                         alt="img"></a>
                                     <? else: ?>
                                         <a href="<?= $arItem["DETAIL_PAGE_URL"] ?>"><img
                                                 src="<?= SITE_TEMPLATE_PATH ?>/img/no_photo_left_block.jpg"

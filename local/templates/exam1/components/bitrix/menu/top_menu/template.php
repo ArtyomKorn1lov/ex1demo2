@@ -34,12 +34,13 @@
 
                                         <? else: ?>
 
-                                            <? if ($arItem["PERMISSION"] > "D"): ?>
+                                            <? if ($arItem["PERMISSION"] > "D"):?>
 
                                                 <? if ($arItem["DEPTH_LEVEL"] == 1): ?>
                                                     <li <? if ($arItem["LINK"] == "/"): ?>class="main-page" <? endif ?>>
                                                         <a href="<?= $arItem["LINK"] ?>"
-                                                           class="<? if ($arItem["SELECTED"]): ?>root-item-selected<? else: ?>root-item<? endif ?>"><?= $arItem["TEXT"] ?></a>
+                                                           class="<? if ($arItem["SELECTED"]): ?>root-item-selected<? else: ?>root-item<? endif ?>"
+                                                        ><?=($arItem["TEXT"])?></a>
                                                     </li>
                                                 <? else: ?>
                                                     <li<? if ($arItem["SELECTED"]): ?> class="item-selected"<? endif ?>>
